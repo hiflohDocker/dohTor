@@ -21,7 +21,7 @@ jobs:
         ddk: ${{secrets.DOCKER_DEPLOY_KEY}}
       run: echo $ddk | docker login -u flohsg --password-stdin
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag dohtor:$(date +%s) -t dohtor:latest
+      run: docker build . --file Dockerfile --tag dohtor:$(date +%s) -t flohsg/dohtor:latest
     - name: docker push
       run: docker push dohtor
     - name: docker logout
