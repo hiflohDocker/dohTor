@@ -23,6 +23,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag dohtor:$(date +%s) -t flohsg/dohtor:latest
     - name: docker push
-      run: docker push dohtor
+      run: docker push flohsg/dohtor
     - name: docker logout
       run: docker logout
